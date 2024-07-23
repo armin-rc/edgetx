@@ -75,7 +75,7 @@ local function run(sw_up_1, sw_up_2, sw_dn_1, sw_dn_2, sw_dn_3, gears) -- Number
         if active == 1 then
             return cha_val * 10.24, current_gear * 10.24
         end
-        if current_gear < 5 then
+        if current_gear < gears then
             current_gear = current_gear + 1
             cha_val = current_gear * gear_step
         end        
