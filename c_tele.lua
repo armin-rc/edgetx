@@ -185,11 +185,12 @@ local function processSteering()
 
     local sw_val_4ws_prio = getLogicalSwitchValue(LSW_ID_4WS_PRIO)
     local prio_4ws = "FRONT"
+    local mode_4ws = "FWS"
     if sw_val_4ws_prio == true then
         prio_4ws = "REAR"
+        mode_4ws = "RWS"
     end
 
-    local mode_4ws = prio_4ws
     if st_mix_val < 0 then
         mode_4ws = "4WS"
     elseif st_mix_val > 0 then
@@ -247,13 +248,8 @@ local function processSteering()
     return y_pos
 end
 
-local function run(event)                                       -- Called periodically
-    lcd.clear()                                                 -- needed to run properly    
-
-    local th_y = processThrottle()
-    local st_y = processSteering()
-
-    local y_pos = math.max(th_y, st_y) + 3
+local function processWinch(ypos)
+    local y_pos = ypos
 
     lcd.drawLine(0, y_pos, LCD_W, y_pos, SOLID, 0)
     y_pos = y_pos + 3
@@ -271,12 +267,10 @@ local function run(event)                                       -- Called period
     local anim_x_offset = 0
     if winch_val > 0 then
         winch_txt = ">>"
-        --winch_x_base = winch_x_base + 10
         cycleCounter = cycleCounter + 1
         anim_x_offset = 5
     elseif winch_val < 0 then
         winch_txt = "<<"
-        --winch_x_base = winch_x_base - 10
         cycleCounter = cycleCounter + 1
         anim_x_offset = -5
     else
@@ -298,7 +292,17 @@ local function run(event)                                       -- Called period
 
     lcd.drawFilledRectangle(0, y_pos, LCD_W / 2 - 2, LINE_HEIGHT)
     lcd.drawText(1, y_pos + 1, "WINCH", INVERS)
-    lcd.drawText(winch_x_base, y_pos + 1, winch_txt)
+    lcd.drawText(winch_x_base, y_pos + 1, winch_txt)    
+end
+
+local function run(event)                                       -- Called periodically
+    lcd.clear()                                                 -- needed to run properly    
+
+    local th_y = processThrottle()
+    local st_y = processSteering()
+
+    local y_pos = math.max(th_y, st_y) + 3
+    processWinch(y_pos)
 end
 
 return { input=input, run=run, init=init }
