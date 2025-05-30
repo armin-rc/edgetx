@@ -6,7 +6,7 @@
 ---- # YouTube channel: https://www.youtube.com/@arminrc    #
 ---- # !!! Please like and subscribe !!!                    #
 ---- #                                                      #
----- # Script Type: Mixes			            #
+---- # Script Type: Mixes									#
 ---- #                                                      #
 ---- ########################################################
 

@@ -9,7 +9,7 @@
 ---- # Like this script? Buy me a coffee!                           #
 ---- # https://www.buymeacoffee.com/arminrc                         #
 ---- #                                                              #
----- # Script Type: Mixes			                    #
+---- # Script Type: Mixes			                                #
 ---- #                                                              #
 ---- ################################################################
 
