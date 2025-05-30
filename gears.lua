@@ -9,11 +9,13 @@
 ---- # Like this script? Buy me a coffee!                           #
 ---- # https://www.buymeacoffee.com/arminrc                         #
 ---- #                                                              #
+---- # Script Type: Mixes			                    #
+---- #                                                              #
 ---- ################################################################
 
 ---- ################################################################
 ---- #                                                              #
----- # Logical switches used in the setup                            #
+---- # Logical switches used in the setup                           #
 ---- # SW_UP1: L01: Edge | T3- | [0.0:0.3] | Duration: 0.2          #
 ---- # SW_UP2: L02: Edge | T3- | [0.4:<<]  | Duration: 0.2          #
 ---- # SW_DN1: L03: Edge | T3+ | [0.0:0.3] | Duration: 0.2          #
