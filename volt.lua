@@ -6,6 +6,8 @@
 ---- # YouTube channel: https://www.youtube.com/@arminrc    #
 ---- # !!! Please like and subscribe !!!                    #
 ---- #                                                      #
+---- # Script Type: Telemetry                               #
+---- #                                                      #
 ---- ########################################################
 
 -- Constants
