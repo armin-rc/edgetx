@@ -6,6 +6,8 @@
 ---- # YouTube channel: https://www.youtube.com/@arminrc    #
 ---- # !!! Please like and subscribe !!!                    #
 ---- #                                                      #
+---- # Script Type: Function                                #
+---- #                                                      #
 ---- ########################################################
 
 TRIG1_IDX = 0				-- index of the 1st logical switch that trigger the script (up)
